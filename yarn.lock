@@ -2056,17 +2056,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@defer/client@npm:^1.7.2":
-  version: 1.7.2
-  resolution: "@defer/client@npm:1.7.2"
+"@defer/client@npm:1.8.1":
+  version: 1.8.1
+  resolution: "@defer/client@npm:1.8.1"
   dependencies:
     "@whatwg-node/fetch": ^0.9.7
     parse-duration: ^1.0.2
     uuid: ^9.0.0
-  peerDependencies:
-    next: ^13.4.7
-    react: ^18.2.0
-  checksum: bb247668570283002e77240d346de95d4662fa1ecf90fc82257983f7dfb11f70c4ff8c745a80ab8ace5312ca930488dd9d4f2b3fc2fdc183babb8371768615f0
+  checksum: d6dad54476f3c5b82cab0b192df2b441f1bb0c0df96f529cc27b900dd26834b53787cfc8b1d6a3f98d239d0df51ec9c080c757713c15c3d0e166a35f517926b7
   languageName: node
   linkType: hard
 
@@ -7267,7 +7264,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "api@workspace:api"
   dependencies:
-    "@defer/client": ^1.7.2
+    "@defer/client": 1.8.1
     "@react-email/button": 0.0.9
     "@react-email/html": 0.0.4
     "@redwoodjs/api": 6.0.0-rc.617

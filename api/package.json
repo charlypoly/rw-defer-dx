@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "@defer/client": "^1.7.2",
+    "@defer/client": "1.8.1",
     "@react-email/button": "0.0.9",
     "@react-email/html": "0.0.4",
     "@redwoodjs/api": "6.0.0-rc.617",
