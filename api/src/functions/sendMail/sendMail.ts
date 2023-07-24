@@ -1,6 +1,7 @@
 import type { APIGatewayEvent, Context } from 'aws-lambda'
 
-import sendEmail from 'src/jobs/defer/sendEmail'
+import { addMetadata, delay } from 'src/jobs/clients/defer'
+import sendEmailFn from 'src/jobs/defer/sendEmail'
 import { logger } from 'src/lib/logger'
 /**
  * The handler function is your code that processes http request events.
@@ -21,6 +22,12 @@ import { logger } from 'src/lib/logger'
 export const handler = async (event: APIGatewayEvent, _context: Context) => {
   logger.info(`${event.httpMethod} ${event.path}: sendMail function`)
 
+  const sendEmail = delay(
+    addMetadata(sendEmailFn, {
+      email: process.env.SEND_TO_EMAIL,
+    }),
+    '1min'
+  )
   await sendEmail()
 
   return {
