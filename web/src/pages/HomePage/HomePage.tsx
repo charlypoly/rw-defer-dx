@@ -63,6 +63,32 @@ const HomePage = () => {
             Defer the Characters Service
           </button>
         </div>
+        <div>
+          <button
+            className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
+            onClick={async () => {
+              const response = await fetch(
+                `${globalThis.RWJS_API_URL}/runTimeout`
+              )
+
+              alert((await response.json()).data)
+            }}
+          >
+            Timeout
+          </button>
+        </div>
+        <div>
+          <button
+            className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
+            onClick={async () => {
+              const response = await fetch(`${globalThis.RWJS_API_URL}/runOops`)
+
+              alert((await response.json()).data)
+            }}
+          >
+            Error
+          </button>
+        </div>
       </div>
     </div>
   )
