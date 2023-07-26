@@ -1,6 +1,6 @@
+import { defer } from '@defer/client'
 import { formatRFC7231 } from 'date-fns'
 
-import { defer } from 'src/jobs'
 import { logger } from 'src/lib/logger'
 
 const time = async () => {

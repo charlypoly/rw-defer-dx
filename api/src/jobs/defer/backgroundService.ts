@@ -1,4 +1,5 @@
-import { defer } from 'src/jobs'
+import { defer } from '@defer/client'
+
 import { characters } from 'src/services/characters/characters'
 
 // the function must be wrapped with `defer()` and exported as default

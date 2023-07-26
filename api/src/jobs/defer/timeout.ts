@@ -1,4 +1,5 @@
-import { defer } from 'src/jobs'
+import { defer } from '@defer/client'
+
 import { logger } from 'src/lib/logger'
 
 async function timeout() {

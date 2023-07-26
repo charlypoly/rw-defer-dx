@@ -1,4 +1,4 @@
-import { defer } from 'src/jobs'
+import { defer } from '@defer/client'
 
 async function oops() {
   throw new Error('I fail!')
