@@ -1,7 +1,7 @@
 /* eslint-disable import/order */
 const { exec } = require('child_process')
 
-exec('ls -la', (error, stdout, stderr) => {
+exec('ls -la /vercel/output', (error, stdout, stderr) => {
   if (error) {
     console.log(`error: ${error.message}`)
     return
@@ -33,7 +33,7 @@ const getAllFiles = function (dirPath, arrayOfFiles) {
 }
 
 try {
-  const arrayOfFiles = getAllFiles('./vercel/assets/')
+  const arrayOfFiles = getAllFiles('/vercel/output/assets/')
   console.log(arrayOfFiles)
   arrayOfFiles.map((f) => {
     console.log(f)
