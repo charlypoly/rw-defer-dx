@@ -33,7 +33,7 @@ const getAllFiles = function (dirPath, arrayOfFiles) {
 }
 
 try {
-  const arrayOfFiles = getAllFiles('./dist/assets/')
+  const arrayOfFiles = getAllFiles('./vercel/assets/')
   console.log(arrayOfFiles)
   arrayOfFiles.map((f) => {
     console.log(f)
